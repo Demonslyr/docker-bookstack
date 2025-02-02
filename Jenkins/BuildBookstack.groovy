@@ -1,7 +1,7 @@
 properties([pipelineTriggers([githubPush()])])
 node {
     jenkinsGitCredentials = 'jenkinsGitHubSvc'
-    git url: 'https://github.com/Demonslyr/Atriarch.Cdn.Client.git',branch: 'main',credentialsId: jenkinsGitCredentials
+    git url: 'https://github.com/Demonslyr/docker-bookstack.git',branch: 'main',credentialsId: jenkinsGitCredentials
     stage('setup'){
         checkout scm
         currentBuild.description = "${Branch}"
